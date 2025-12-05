@@ -54,7 +54,7 @@ export default function Hero({ user, myAnimals, setMyAnimals }) {
 
   return (
     <div className="relative w-full min-h-screen overflow-hidden flex items-center justify-center px-6 py-12">
-      {/* Animated Gradient Background */}
+
       <motion.div
         className="absolute inset-0"
         animate={{ backgroundPosition: ["0% 50%", "100% 50%"] }}
@@ -62,17 +62,17 @@ export default function Hero({ user, myAnimals, setMyAnimals }) {
         style={{ background: "linear-gradient(270deg,#6b73ff,#4b55ff,#000dff)", backgroundSize: "600% 600%" }}
       />
 
-      {/* Floating shapes */}
+
       <motion.div className="absolute w-64 h-64 bg-white/8 rounded-full" animate={{ y: [0, 40, 0] }} transition={{ duration: 10, repeat: Infinity }} />
       <motion.div className="absolute w-80 h-80 bg-white/6 rounded-full bottom-0 right-0" animate={{ y: [0, -40, 0] }} transition={{ duration: 12, repeat: Infinity }} />
 
       <div className="relative z-10 flex flex-col md:flex-row items-center justify-center gap-12 w-full max-w-6xl">
-        {/* Left */}
+
         <div className="flex-1 text-center md:text-left">
           <h1 className="text-5xl md:text-6xl font-extrabold text-white drop-shadow-lg mb-4">Choose Your Pet</h1>
           <p className="text-lg md:text-xl text-white/90 mb-6">Select a pet, set km (slider or input), and get instant price.</p>
 
-          {/* Animal selection */}
+
           <div className="flex justify-center md:justify-start gap-4">
             {[
               { id: "Dog", emoji: "🐶" },
@@ -92,9 +92,9 @@ export default function Hero({ user, myAnimals, setMyAnimals }) {
           </div>
         </div>
 
-        {/* Right */}
+
         <div className="flex-1 flex flex-col items-center gap-6">
-          {/* Add Modal */}
+
           <AnimatePresence>
             {openAddModal && (
               <motion.div
@@ -183,7 +183,7 @@ export default function Hero({ user, myAnimals, setMyAnimals }) {
             )}
           </AnimatePresence>
 
-          {/* Animal Cards List */}
+
           {myAnimals.length > 0 ? (
             <div className="mt-6 w-80 space-y-3">
               <h2 className="text-white font-bold">Your Animals</h2>
