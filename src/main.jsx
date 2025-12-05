@@ -10,7 +10,7 @@ function MainPage() {
   const [myAnimals, setMyAnimals] = useState([]);
   const [darkMode, setDarkMode] = useState(false);
 
-  // Wrap root with className controlling dark mode
+
   return (
     <div className={darkMode ? "dark" : ""}>
       <div className="w-full min-h-screen bg-gray-100 dark:bg-[#0b1220] transition-colors duration-300">
