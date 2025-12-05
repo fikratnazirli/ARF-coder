@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-// image providers
 const getRandomDog = () => `https://placedog.net/600/480?random&t=${Date.now()}`;
 const getRandomCat = () => `https://cataas.com/cat?timestamp=${Date.now()}`;
 
@@ -19,7 +18,6 @@ export default function Hero({ user, myAnimals, setMyAnimals }) {
     setImgLoading(true);
     if (type === "Dog") setSelectedAnimalImage(getRandomDog());
     else if (type === "Cat") setSelectedAnimalImage(getRandomCat());
-    // open add modal automatically
     setOpenAddModal(true);
   };
 
